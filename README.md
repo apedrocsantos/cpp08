@@ -50,8 +50,8 @@ int main()
 Algorithms - collection of functions of algorithms pre-implemented, that allow to make operations.
 
 ```CPP
-    #include <algorithm>
-    #include <list>
+#include <algorithm>`
+#include <list>
 
 int displayInt(int i)
 {
