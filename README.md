@@ -1,8 +1,12 @@
 # CPP08
 
-STL - Standard Template Library
+[STL - Standard Template Library](https://www.geeksforgeeks.org/the-c-standard-template-library-stl/?ref=lbp)
 
-Containers - generic templated containers.
+**Containers**: The STL provides a range of containers, such as vector, list, map, set, and stack, which can be used to store and manipulate data.
+
+**Algorithms**: The STL provides a range of algorithms, such as sort, find, and binary_search, which can be used to manipulate data stored in containers.
+
+**Iterators**: Iterators are objects that provide a way to traverse the elements of a container. The STL provides a range of iterators, such as forward_iterator, bidirectional_iterator, and random_access_iterator, that can be used with different types of containers.
 
 All STL container classes can use iterators.
 

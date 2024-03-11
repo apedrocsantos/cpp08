@@ -5,32 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 22:26:41 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/07 18:24:22 by anda-cun         ###   ########.fr       */
+/*   Created: 2024/03/07 18:57:50 by anda-cun          #+#    #+#             */
+/*   Updated: 2024/03/08 19:23:32 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easyfind.hpp"
-#include <list>
+#include "Span.hpp"
+#include <array>
 
 int main()
 {
-    std::list<int> list1;
-
-    list1.push_back(1); // Adds to list
-    list1.push_back(2);
-    list1.push_back(3);
-    list1.push_back(10);
-    list1.push_back(30);
-    list1.push_back(-20);
-    list1.push_back(6);
-
+    Span c(200000);
     try
     {
-        easyfind(list1, 10);
+        c.addNumber(1);
+        c.addNumber(10);
+        c.addNumber(11);
+        // c.addRange(1000,100000);
+        // c.addRange(100000000,100099999);
+        std::cout << c.longestSpan() << std::endl;
+        std::cout << c.shortestSpan() << std::endl;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
     }
 }
+
+// int main()
+// {
+// Span sp = Span(5);
+// sp.addNumber(6);
+// sp.addNumber(3);
+// sp.addNumber(17);
+// sp.addNumber(9);
+// sp.addNumber(11);
+// std::cout << sp.shortestSpan() << std::endl;
+// std::cout << sp.longestSpan() << std::endl;
+// return 0;
+// }
