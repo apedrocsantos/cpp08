@@ -6,7 +6,7 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:57:50 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/08 19:23:32 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/22 22:04:56 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ int main()
     try
     {
         c.addNumber(1);
-        c.addNumber(10);
         c.addNumber(11);
+        c.addNumber(13);
+        c.addNumber(-10);
+        c.addNumber(-20);
         // c.addRange(1000,100000);
         // c.addRange(100000000,100099999);
         std::cout << c.longestSpan() << std::endl;
@@ -34,13 +36,13 @@ int main()
 
 // int main()
 // {
-// Span sp = Span(5);
-// sp.addNumber(6);
-// sp.addNumber(3);
-// sp.addNumber(17);
-// sp.addNumber(9);
-// sp.addNumber(11);
-// std::cout << sp.shortestSpan() << std::endl;
-// std::cout << sp.longestSpan() << std::endl;
-// return 0;
+//     Span sp = Span(5);
+//     sp.addNumber(6);
+//     sp.addNumber(3);
+//     sp.addNumber(17);
+//     sp.addNumber(9);
+//     sp.addNumber(11);
+//     std::cout << sp.shortestSpan() << std::endl;
+//     std::cout << sp.longestSpan() << std::endl;
+//     return 0;
 // }

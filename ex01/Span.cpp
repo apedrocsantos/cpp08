@@ -6,7 +6,7 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:25:40 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/08 19:25:18 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/22 22:00:21 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ int Span::shortestSpan()
     std::vector<int>::const_iterator it;
     std::vector<int> copy = this->_vector;
     sort(copy.begin(), copy.end());
-    int s = abs(*(copy.begin()) - *(copy.begin() + 1));
+    int s = *(copy.begin() + 1) - *(copy.begin());
     for (it = copy.begin(); it != copy.end() - 1; it++)
-        if (abs(*(it + 1) - *it) < s)
+        if ((*(it + 1) - *it) < s)
             s = *(it + 1) - *it;
-    return (abs(s));
+    return (s);
 }
 
 int Span::longestSpan()

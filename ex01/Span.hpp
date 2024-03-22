@@ -6,7 +6,7 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:25:44 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/08 18:54:06 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/22 21:46:34 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ class Span
     std::vector<int> _vector;
     std::vector<int>::iterator _cur;
     Span();
+    unsigned int getN() const;
+    void print();
+    int getSize() const;
     
     public:
     
@@ -29,13 +32,10 @@ class Span
     Span(const Span& that);
     Span &operator=(const Span& that);
     ~Span() {};
-    unsigned int getN() const;
-    void addNumber(int nb);
     int shortestSpan();
     int longestSpan();
+    void addNumber(int nb);
     void addRange(int start, int end);
-    void print();
-    int getSize() const;
 };
 
 #endif

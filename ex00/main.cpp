@@ -6,7 +6,7 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 22:26:41 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/07 18:24:22 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/22 21:44:22 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
 
     try
     {
-        easyfind(list1, 10);
+        easyfind(list1, 100);
     }
     catch(const std::exception& e)
     {
