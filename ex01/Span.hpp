@@ -6,14 +6,14 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:25:44 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/22 21:46:34 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:07:34 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SPAN_HPP
 #define SPAN_HPP
 
-#include <list>
+#include <vector>
 #include <iostream>
 
 class Span

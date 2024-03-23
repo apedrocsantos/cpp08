@@ -6,12 +6,11 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:57:50 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/22 22:04:56 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:33:26 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
-#include <array>
 
 int main()
 {
@@ -23,8 +22,8 @@ int main()
         c.addNumber(13);
         c.addNumber(-10);
         c.addNumber(-20);
-        // c.addRange(1000,100000);
-        // c.addRange(100000000,100099999);
+        c.addRange(1000,100000);
+        c.addRange(100000000,100099999);
         std::cout << c.longestSpan() << std::endl;
         std::cout << c.shortestSpan() << std::endl;
     }

@@ -6,13 +6,12 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:25:40 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/22 22:00:21 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:32:09 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
-#include <iostream>
-#include <array>
+#include <algorithm>
 
 Span::Span(int N) : _N(N)
 {
@@ -21,14 +20,16 @@ Span::Span(int N) : _N(N)
 
 Span::Span(const Span& that) : _N(that.getN())
 {
-    this->_vector.resize(_N);
     *this = that;
 };
 
 Span &Span::operator=(const Span& that)
 {
     if (this != &that)
-        std::cout << "WTV\n";
+    {
+        this->_vector = that._vector;
+        this->_cur = this->_vector.begin();
+    }
     return (*this);
 };
 
@@ -48,10 +49,10 @@ void Span::addNumber(int nb)
 int Span::shortestSpan()
 {
     if (this->_vector.size() <= 1)
-        throw(std::logic_error("Vector too small: can't calculate shortest span."));
+        throw(std::logic_error("Error: vector too small, can't calculate shortest span."));
     std::vector<int>::const_iterator it;
     std::vector<int> copy = this->_vector;
-    sort(copy.begin(), copy.end());
+    std::sort(copy.begin(), copy.end());
     int s = *(copy.begin() + 1) - *(copy.begin());
     for (it = copy.begin(); it != copy.end() - 1; it++)
         if ((*(it + 1) - *it) < s)
@@ -62,16 +63,16 @@ int Span::shortestSpan()
 int Span::longestSpan()
 {
     if (this->_vector.size() <= 1)
-        throw(std::logic_error("Vector too small: can't calculate longest span."));
+        throw(std::logic_error("Error: vector too small, can't calculate longest span."));
     std::vector<int> copy = this->_vector;
-    sort(copy.begin(), copy.end());
+    std::sort(copy.begin(), copy.end());
     return (*(copy.end() - 1) - *copy.begin());
 }
 
 void Span::addRange(int start, int end)
 {
     if (end < start)
-        throw(std::out_of_range("Start must be >= end."));
+        throw(std::out_of_range("Error: Range start must be >= end."));
     int size = end - start;
     if (this->_vector.size() + size > _N)
         throw(std::out_of_range("Error: resulting array size would be larger than maximum size."));
