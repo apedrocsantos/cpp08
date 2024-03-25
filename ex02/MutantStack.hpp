@@ -6,7 +6,7 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 11:49:31 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/22 22:16:22 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/25 10:47:34 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ template <typename T>
 class MutantStack : public std::stack<T, std::deque<T> >
 {
     public:
+    typedef typename std::stack<T>::container_type::iterator iterator;
     MutantStack() {};
     MutantStack(MutantStack &that) {*this = that;};
     MutantStack &operator=(MutantStack &that)
@@ -36,7 +37,6 @@ class MutantStack : public std::stack<T, std::deque<T> >
     };
     ~MutantStack() {};
     void clear() {this->c.clear();};
-    typedef typename std::stack<T>::container_type::iterator iterator;
     iterator begin() {return this->c.begin();};
     iterator end() {return this->c.end();};
     iterator rbegin() {return this->c.rbegin();};

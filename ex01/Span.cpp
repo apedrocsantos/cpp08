@@ -6,17 +6,14 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:25:40 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/23 15:32:09 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/25 10:44:46 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 #include <algorithm>
 
-Span::Span(int N) : _N(N)
-{
-    this->_cur = this->_vector.begin();
-};
+Span::Span(int N) : _N(N) {};
 
 Span::Span(const Span& that) : _N(that.getN())
 {
@@ -28,7 +25,6 @@ Span &Span::operator=(const Span& that)
     if (this != &that)
     {
         this->_vector = that._vector;
-        this->_cur = this->_vector.begin();
     }
     return (*this);
 };
@@ -43,7 +39,6 @@ void Span::addNumber(int nb)
     if (this->_vector.size() == this->_N)
         throw(std::out_of_range("Error: resulting array size would be larger than maximum size."));
     this->_vector.push_back(nb);
-    this->_cur++;
 }
 
 int Span::shortestSpan()

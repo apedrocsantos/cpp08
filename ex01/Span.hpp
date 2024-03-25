@@ -6,7 +6,7 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:25:44 by anda-cun          #+#    #+#             */
-/*   Updated: 2024/03/23 15:07:34 by anda-cun         ###   ########.fr       */
+/*   Updated: 2024/03/25 10:44:32 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Span
 {
     unsigned int const _N;
     std::vector<int> _vector;
-    std::vector<int>::iterator _cur;
     Span();
     unsigned int getN() const;
     void print();
